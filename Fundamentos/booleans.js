@@ -30,6 +30,6 @@ console.log('' || null || 0 || 'Ola'); // Irá retornar o primeiro valor
 let nome = '';
 console.log(nome || 'Robison') /* Caso não haja nada atribuido a variavel
                                 * nome (será undefined) entao o valor
-                                * 'Robison' será atribuido a ela.
+                                * 'Robison' será exibido. (NÃO ATRIBUIDO)
                                 */
 
