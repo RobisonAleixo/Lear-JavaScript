@@ -1,0 +1,1 @@
+module.exports.ateLogo = 'Até ao próximo exemplo!';
