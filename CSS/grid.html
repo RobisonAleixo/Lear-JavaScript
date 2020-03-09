@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 20px;
+        height: calc(100% - 40px);
+        background-color: lightgray;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        border: solid 5px dodgerblue;
+        background: #fff;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 200px 20% 1fr;
+        grid-template-rows: repeat(4, 3fr);
+        grid-template-rows: 100px auto;
+    }
+
+    .d8 {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+    }
+
+</style>
+
+<body>
+
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+
+
+</body>
+
+</html>
