@@ -10,6 +10,70 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        const item = document.querySelector('div');
+        item.style.position = 'absolute';
+
+        const keyA = 65;
+        const keyD = 68;
+        const keyW = 87;
+        const keyS = 83;
+        const speed = 50;
+
+        let positionX = null;
+        let positionY = null;
+
+        let frame = setInterval(move, 5);
+
+        window.addEventListener("keydown", () => {
+            const keyDown = event.keyCode;
+
+            if (keyDown == keyA)
+                positionX -= 1;
+            if (keyDown == keyD)
+                positionX += 1;
+            if (keyDown == keyW)
+                positionY -= 1;
+            if (keyDown == keyS)
+                positionY += 1;
+
+        });
+        function move() {
+     
+                item.style.left = (positionX * speed) + "px";
+                item.style.top = (positionY * speed) + "px";
+
+        }
+
+        /*
+        window.addEventListener("keyup",  () => {
+            const keyUp = event.keyCode;
+
+            if (keyUp == keyA)
+                positionX = 0;
+            if (keyUp == keyD)
+                positionX = 0;
+            if (keyUp == keyW)
+                positionY = 0;
+            if (keyUp == keyS)
+                positionY = 0;
+
+        });
+
+*/
+
+       /*
+         
+                item.onmousemove = e => {
+                    const item = e.target;
+        
+                    item.style.cursor = 'move';
+                    if (e.buttons) {
+                        item.style.userSelect = 'none';
+                        item.style.top = `${e.clientY - (item.clientHeight / 2)}px`;
+                        item.style.left = `${e.clientX - (item.clientWidth / 2)}px`;
+                    }
+                };
+        
+   */
     </script>
 </body>
